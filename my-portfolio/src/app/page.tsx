@@ -8,13 +8,12 @@ export default function HomePage() {
 
       <section id="about" className="min-h-screen scroll-mt-24 px-4 py-16">
         <h2 className="text-3xl font-semibold mb-4">About</h2>
-        <p>I am an aspiring computer science student at University of Glasgow. </p>
+        <p>I am an aspiring computer science student at . </p>
       </section>
 
       <section id="resume" className="min-h-screen scroll-mt-24 px-4 py-16">
         <h2 className="text-3xl font-semibold mb-4">Resume</h2>
-        <p>University of Glasgow<b></b>
-          Glasgow, UK
+        <p>UK
         </p>
       </section>
 
