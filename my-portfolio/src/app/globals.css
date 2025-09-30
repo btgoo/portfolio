@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
+/* Light vars (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #bbd8f5;
+  --foreground: #1c2130;
 }
 
+/* Dark vars when <html class="dark"> */
+.dark {
+  --background: #181b26;
+  --foreground: #ededed;
+}
+
+/* Expose vars to Tailwind via @theme (optional but nice) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -25,10 +26,10 @@ body {
   font-family: 'Host Grotesk', Arial, Helvetica, sans-serif;
 }
 
+/* Reusable nav styles (light + dark variants) */
 .nav-link {
-  @apply px-3 py-2 rounded-md transition-colors hover:bg-gray-200/40;
+  @apply px-3 py-2 rounded-md transition-colors hover:bg-gray-200/40 dark:hover:bg-gray-700/50;
 }
-
 .nav-link-active {
-  @apply px-3 py-2 rounded-md border border-white;
+  @apply px-3 py-2 rounded-md border border-white/80 dark:border-white/60;
 }
